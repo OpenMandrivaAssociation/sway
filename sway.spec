@@ -23,6 +23,7 @@ BuildRequires:  pkgconfig(libinput)
 BuildRequires:	pcre-devel
 BuildRequires:	pam-devel
 BuildRequires:	a2x
+BuildRequires:	xsltproc
 BuildRequires:	ffmpeg-devel
 
 %description
