@@ -1,13 +1,17 @@
 %define _disable_ld_no_undefined 1
+%define	date 20160427
 
 Summary:	SirCmpwn's Wayland window manager
 Name:           sway
 Version:        0.5
-Release:        1
+Release:        0.%{date}.1
 License:        GPLv2+
 Group:          Monitoring
 Url:		https://github.com/SirCmpwn/sway
-Source0:	https://github.com/SirCmpwn/sway/archive/%{version}.tar.gz
+# git clone https://github.com/SirCmpwn/sway.git
+# git archive --format=tar --prefix sway-0.5-$(date +%Y%m%d)/ HEAD | xz -vf > ../sway-0.5-$(date +%Y%m%d).tar.xz
+Source0:	https://github.com/SirCmpwn/sway/archive/%{name}-%{version}-%{date}.tar.xz
+
 BuildRequires:	cmake
 BuildRequires:	pkgconfig(wayland-server)
 BuildRequires:	pkgconfig(json-c)
@@ -38,10 +42,11 @@ Group:		Editors
 Zsh completion for %{name}
 
 %prep
-%setup -q
+%setup -qn %{name}-%{version}-%{date}
 
 %build
-%cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr \
+export CFLAGS="%{optflags}"
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr \
       -DCMAKE_INSTALL_SYSCONFDIR=/etc
 %make
 
