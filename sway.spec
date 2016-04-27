@@ -3,7 +3,7 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:           sway
 Version:        0.5
-Release:        7
+Release:        1
 License:        GPLv2+
 Group:          Monitoring
 Url:		https://github.com/SirCmpwn/sway
@@ -14,6 +14,7 @@ BuildRequires:	pkgconfig(json-c)
 BuildRequires:	pkgconfig(pango)
 BuildRequires:	pkgconfig(ImageMagick)
 BuildRequires:	pkgconfig(cairo)
+BuildRequires:	pkgconfig(pangocairo)
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
 BuildRequires:	pkgconfig(wlc)
 BuildRequires:	pkgconfig(chck)
@@ -39,7 +40,7 @@ Zsh completion for %{name}
 %setup -q
 
 %build
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr \
+%cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr \
       -DCMAKE_INSTALL_SYSCONFDIR=/etc
 %make
 
