@@ -1,5 +1,5 @@
 %define _disable_ld_no_undefined 1
-%define	date 20160427
+%define	date 20160524
 
 Summary:	SirCmpwn's Wayland window manager
 Name:           sway
@@ -34,13 +34,6 @@ BuildRequires:	ffmpeg-devel
 "SirCmpwn's Wayland window manager" is a work in progress
 i3-compatible window manager for Wayland.
 
-%package	zsh-completion
-Summary:	zsh-completion for %{name}
-Group:		Editors
-
-%description	zsh-completion
-Zsh completion for %{name}
-
 %prep
 %setup -qn %{name}-%{version}-%{date}
 
@@ -61,7 +54,3 @@ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr \
 %{_mandir}/man1/%{name}*.*
 %{_datadir}/%{name}/
 %{_datadir}/wayland-sessions/sway.desktop
-
-%files zsh-completion
-%{_datadir}/zsh/site-functions/_sway*
-
