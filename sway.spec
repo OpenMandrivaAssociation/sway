@@ -1,5 +1,4 @@
-%define _disable_ld_no_undefined 1
-%define	date 20160524
+%define	date 20160817
 
 Summary:	SirCmpwn's Wayland window manager
 Name:           sway
