@@ -1,15 +1,14 @@
-%define	date 20160817
-
 Summary:	SirCmpwn's Wayland window manager
 Name:           sway
-Version:        0.5
-Release:        0.%{date}.1
+Version:        0.10
+Release:        1
 License:        GPLv2+
 Group:          Monitoring
 Url:		https://github.com/SirCmpwn/sway
 # git clone https://github.com/SirCmpwn/sway.git
 # git archive --format=tar --prefix sway-0.5-$(date +%Y%m%d)/ HEAD | xz -vf > ../sway-0.5-$(date +%Y%m%d).tar.xz
-Source0:	https://github.com/SirCmpwn/sway/archive/%{name}-%{version}-%{date}.tar.xz
+# Source0:	https://github.com/SirCmpwn/sway/archive/%{name}-%{version}-%{date}.tar.xz
+Source0:	https://github.com/SirCmpwn/sway/archive/%{version}.tar.gz
 
 BuildRequires:	cmake
 BuildRequires:	pkgconfig(wayland-server)
@@ -34,16 +33,16 @@ BuildRequires:	ffmpeg-devel
 i3-compatible window manager for Wayland.
 
 %prep
-%setup -qn %{name}-%{version}-%{date}
+%setup -q
 
 %build
 export CFLAGS="%{optflags}"
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr \
+%cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr \
       -DCMAKE_INSTALL_SYSCONFDIR=/etc
 %make
 
 %install
-%makeinstall_std
+%makeinstall_std -C build
 
 %files
 %{_sysconfdir}/%{name}/config
