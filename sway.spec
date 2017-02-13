@@ -1,10 +1,10 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:           sway
-Version:        0.10
+Version:        0.11
 Release:        1
 License:        GPLv2+
 Group:          Monitoring
-Url:		https://github.com/SirCmpwn/sway
+Url:		https://github.com/SirCmpwn
 # git clone https://github.com/SirCmpwn/sway.git
 # git archive --format=tar --prefix sway-0.5-$(date +%Y%m%d)/ HEAD | xz -vf > ../sway-0.5-$(date +%Y%m%d).tar.xz
 # Source0:	https://github.com/SirCmpwn/sway/archive/%{name}-%{version}-%{date}.tar.xz
@@ -46,10 +46,12 @@ export CFLAGS="%{optflags}"
 %makeinstall_std -C build
 
 %files
-%{_sysconfdir}/%{name}/config
+%config(noreplace)%{_sysconfdir}/%{name}/config
 %{_sysconfdir}/pam.d/swaylock
+%{_sysconfdir}/%{name}/security
 %{_bindir}/sway*
 %{_mandir}/man5/%{name}*.*
 %{_mandir}/man1/%{name}*.*
+%{_mandir}/man7/%{name}*.*
 %{_datadir}/%{name}/
 %{_datadir}/wayland-sessions/sway.desktop
