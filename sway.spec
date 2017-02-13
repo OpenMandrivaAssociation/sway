@@ -22,6 +22,7 @@ BuildRequires:	pkgconfig(wlc)
 BuildRequires:	pkgconfig(chck)
 BuildRequires:  pkgconfig(xkbcommon)
 BuildRequires:  pkgconfig(libinput)
+BuildRequires:  pkgconfig(libcap)
 BuildRequires:	pcre-devel
 BuildRequires:	pam-devel
 BuildRequires:	a2x
