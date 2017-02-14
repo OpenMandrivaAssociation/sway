@@ -1,7 +1,7 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:           sway
 Version:        0.11
-Release:        2
+Release:        3
 License:        GPLv2+
 Group:          Monitoring
 Url:		https://github.com/SirCmpwn
@@ -10,6 +10,7 @@ Url:		https://github.com/SirCmpwn
 # Source0:	https://github.com/SirCmpwn/sway/archive/%{name}-%{version}-%{date}.tar.xz
 Source0:	https://github.com/SirCmpwn/sway/archive/%{version}.tar.gz
 Requires:	libcap-utils
+Requires:	imagemagick
 
 BuildRequires:	cmake
 BuildRequires:	pkgconfig(wayland-server)
