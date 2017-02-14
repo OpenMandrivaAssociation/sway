@@ -9,7 +9,7 @@ Url:		https://github.com/SirCmpwn
 # git archive --format=tar --prefix sway-0.5-$(date +%Y%m%d)/ HEAD | xz -vf > ../sway-0.5-$(date +%Y%m%d).tar.xz
 # Source0:	https://github.com/SirCmpwn/sway/archive/%{name}-%{version}-%{date}.tar.xz
 Source0:	https://github.com/SirCmpwn/sway/archive/%{version}.tar.gz
-Requires:	libcap-utils
+Requires(pre):	libcap-utils
 Requires:	imagemagick
 
 BuildRequires:	cmake
