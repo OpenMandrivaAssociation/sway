@@ -1,6 +1,6 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:           sway
-Version:        0.14.0
+Version:        0.15.0
 Release:        1
 License:        GPLv2+
 Group:          Monitoring
@@ -59,5 +59,5 @@ export CFLAGS="%{optflags}"
 %{_mandir}/man5/%{name}*.*
 %{_mandir}/man1/%{name}*.*
 %{_mandir}/man7/%{name}*.*
-%{_datadir}/%{name}/
+%{_datadir}/backgrounds/%{name}/
 %{_datadir}/wayland-sessions/sway.desktop
