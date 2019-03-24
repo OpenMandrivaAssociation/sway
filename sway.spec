@@ -11,6 +11,7 @@ Url:		https://github.com/SirCmpwn
 Source0:	https://github.com/SirCmpwn/sway/archive/%{version}.tar.gz
 Requires(pre):	libcap-utils
 Requires:	imagemagick
+# update it too next time
 Requires:	swaylock
 Requires:	swayidle
 
