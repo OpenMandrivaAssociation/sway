@@ -12,6 +12,7 @@ Source0:	https://github.com/SirCmpwn/sway/archive/%{version}.tar.gz
 Requires(pre):	libcap-utils
 Requires:	imagemagick
 Requires:	swaylock
+Requires:	swayidle
 
 BuildRequires:	meson
 BuildRequires:	pkgconfig(wayland-server)
