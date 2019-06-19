@@ -1,5 +1,0 @@
-warning: Macro expanded in comment on line 10: %{name}-%{version}-%{date}.tar.xz
-
-error: Bad source: /home/omv/sway/1.1.1.tar.gz: No such file or directory
-Building target platforms: x86_64
-Building for target x86_64
