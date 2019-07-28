@@ -15,6 +15,7 @@ Requires:	imagemagick
 Requires:	swaylock
 Requires:	swayidle
 Requires:	rofi
+Requires:	grim
 
 BuildRequires:	meson
 BuildRequires:	pkgconfig(wayland-server)
