@@ -16,6 +16,7 @@ Requires:	swaylock
 Requires:	swayidle
 Requires:	rofi
 Requires:	grim
+Requires:	slurp
 
 BuildRequires:	meson
 BuildRequires:	pkgconfig(wayland-server)
