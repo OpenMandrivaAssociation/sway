@@ -1,7 +1,7 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:           sway
 Version:	1.2
-Release:	1
+Release:	2
 License:        GPLv2+
 Group:          Monitoring
 Url:		https://github.com/SirCmpwn
@@ -53,6 +53,8 @@ export CFLAGS="%{optflags}"
 
 %install
 %meson_install
+# use kitty terminal
+sed -i 's!urxvt!kitty' %{buildroot}/etc/sway/config
 
 
 %post
