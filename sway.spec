@@ -54,7 +54,7 @@ export CFLAGS="%{optflags}"
 %install
 %meson_install
 # use kitty terminal
-sed -i 's!urxvt!kitty' %{buildroot}/etc/sway/config
+sed -i 's!urxvt!kitty!g' %{buildroot}/etc/sway/config
 
 
 %post
