@@ -19,6 +19,7 @@ Requires:	grim
 Requires:	slurp
 Requires:	swaybg
 Requires:	kitty
+Requires:	wl-clipboard
 
 BuildRequires:	meson
 BuildRequires:	pkgconfig(wayland-server)
