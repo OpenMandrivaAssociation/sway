@@ -1,7 +1,7 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:           sway
 Version:	1.2
-Release:	2
+Release:	3
 License:        GPLv2+
 Group:          Monitoring
 Url:		https://github.com/SirCmpwn
@@ -9,6 +9,7 @@ Url:		https://github.com/SirCmpwn
 # git archive --format=tar --prefix sway-0.5-$(date +%Y%m%d)/ HEAD | xz -vf > ../sway-0.5-$(date +%Y%m%d).tar.xz
 # Source0:	https://github.com/SirCmpwn/sway/archive/%{name}-%{version}-%{date}.tar.xz
 Source0:	https://github.com/SirCmpwn/sway/archive/%{version}.tar.gz
+Patch0:		0001-layer-shell-don-t-give-focus-to-unmapped-layer-surfa.patch
 Requires(pre):	libcap-utils
 Requires:	imagemagick
 # update it too next time
