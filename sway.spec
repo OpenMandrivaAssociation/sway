@@ -1,7 +1,7 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:           sway
 Version:	1.2
-Release:	4
+Release:	5
 License:        GPLv2+
 Group:          Monitoring
 Url:		https://github.com/SirCmpwn
@@ -19,6 +19,7 @@ Requires:	rofi
 Requires:	grim
 Requires:	slurp
 Requires:	swaybg
+Requires:	waybar
 Requires:	kitty
 Requires:	mako
 Requires:	wl-clipboard
