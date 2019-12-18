@@ -62,6 +62,7 @@ export CFLAGS="%{optflags}"
 sed -i 's!urxvt!kitty!g' %{buildroot}/etc/sway/config
 
 
+
 %post
 %{_sbindir}/setcap cap_sys_ptrace=eip %{_bindir}/sway
 
