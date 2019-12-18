@@ -19,7 +19,6 @@ Requires:	rofi
 Requires:	grim
 Requires:	slurp
 Requires:	swaybg
-Requires:	waybar
 Requires:	kitty
 Requires:	mako
 Requires:	wl-clipboard
