@@ -24,6 +24,7 @@ Requires:	wl-clipboard
 Requires:	pavucontrol-qt
 
 BuildRequires:	meson
+BuildRequires:	egl-devel
 BuildRequires:	pkgconfig(wayland-server)
 BuildRequires:	pkgconfig(json-c)
 BuildRequires:	pkgconfig(pango)
