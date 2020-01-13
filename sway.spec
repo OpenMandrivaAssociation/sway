@@ -1,7 +1,7 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:           sway
 Version:	1.3
-Release:	1.rc2.0
+Release:	2.rc2.0
 License:        GPLv2+
 Group:          Monitoring
 Url:		https://github.com/SirCmpwn
