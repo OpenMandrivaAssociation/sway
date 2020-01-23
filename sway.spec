@@ -1,14 +1,14 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:           sway
-Version:	1.3
-Release:	2.rc2.0
+Version:	1.4
+Release:	1
 License:        GPLv2+
 Group:          Monitoring
 Url:		https://github.com/SirCmpwn
 # git clone https://github.com/SirCmpwn/sway.git
 # git archive --format=tar --prefix sway-0.5-$(date +%Y%m%d)/ HEAD | xz -vf > ../sway-0.5-$(date +%Y%m%d).tar.xz
 # Source0:	https://github.com/SirCmpwn/sway/archive/%{name}-%{version}-%{date}.tar.xz
-Source0:	https://github.com/swaywm/sway/archive/%{version}-rc2.tar.gz
+Source0:	https://github.com/swaywm/sway/archive/%{version}.tar.gz
 Requires(pre):	libcap-utils
 Requires:	imagemagick
 # update it too next time
@@ -48,7 +48,7 @@ BuildRequires:	docbook-dtds
 i3-compatible window manager for Wayland.
 
 %prep
-%autosetup -p1 -n %{name}-%{version}-rc2
+%autosetup -p1
 
 %build
 export CFLAGS="%{optflags}"
@@ -75,5 +75,5 @@ sed -i 's!urxvt!kitty!g' %{buildroot}/etc/sway/config
 %{_datadir}/backgrounds/%{name}/
 %{_datadir}/wayland-sessions/sway.desktop
 %{_datadir}/bash-completion/completions/*
-%{_datadir}/fish/completions/sway*
+%{_datadir}/fish/vendor_completions.d/*
 %{_datadir}/zsh/site-functions/*
