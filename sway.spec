@@ -1,6 +1,6 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:           sway
-Version:	1.4
+Version:	1.5
 Release:	1
 License:        GPLv2+
 Group:          Monitoring
@@ -60,14 +60,11 @@ export CFLAGS="%{optflags}"
 # use kitty terminal
 sed -i 's!urxvt!kitty!g' %{buildroot}/etc/sway/config
 
-
-
 %post
 %{_sbindir}/setcap cap_sys_ptrace=eip %{_bindir}/sway
 
 %files
 %config(noreplace)%{_sysconfdir}/%{name}/config
-%{_sysconfdir}/%{name}/security.d/00-defaults
 %{_bindir}/sway*
 %{_mandir}/man5/%{name}*.*
 %{_mandir}/man7/sway*.7.*
