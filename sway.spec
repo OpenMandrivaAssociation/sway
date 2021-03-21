@@ -1,7 +1,7 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:		sway
 Version:	1.5.1
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Graphical desktop/Other
 Url:		https://swaywm.org/
@@ -48,6 +48,7 @@ Recommends:	dri-drivers
 Recommends:	qt5-qtwayland
 Recommends:	distro-release-theme
 Recommends:	xwayland
+Recommends:	alacritty
 
 %description
 "SirCmpwn's Wayland window manager" is a work in progress
@@ -67,7 +68,7 @@ export CFLAGS="%{optflags} -O3"
 sed -i 's!urxvt!kitty!g' %{buildroot}/etc/sway/config
 
 # set our background
-sed -i "s|^output \* bg .*|output * bg /usr/share/backgrounds/default.png fill|" %{buildroot}%{_sysconfdir}/sway/config
+sed -i "s|^output \* bg .*|output * bg /usr/share/mdk/backgrounds/default.png fill|" %{buildroot}%{_sysconfdir}/sway/config
 
 %post
 %{_sbindir}/setcap cap_sys_ptrace=eip %{_bindir}/sway
