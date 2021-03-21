@@ -1,10 +1,10 @@
 Summary:	SirCmpwn's Wayland window manager
-Name:           sway
+Name:		sway
 Version:	1.5.1
-Release:	1
-License:        GPLv2+
-Group:          Monitoring
-Url:		https://github.com/SirCmpwn
+Release:	2
+License:	GPLv2+
+Group:		Graphical desktop/Other
+Url:		https://swaywm.org/
 # git clone https://github.com/SirCmpwn/sway.git
 # git archive --format=tar --prefix sway-0.5-$(date +%Y%m%d)/ HEAD | xz -vf > ../sway-0.5-$(date +%Y%m%d).tar.xz
 # Source0:	https://github.com/SirCmpwn/sway/archive/%{name}-%{version}-%{date}.tar.xz
@@ -33,15 +33,19 @@ BuildRequires:	pkgconfig(pangocairo)
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
 BuildRequires:	pkgconfig(wlroots)
-BuildRequires:  pkgconfig(xkbcommon)
-BuildRequires:  scdoc
-BuildRequires:  pkgconfig(libinput)
-BuildRequires:  pkgconfig(libcap)
-BuildRequires:  pkgconfig(libevdev)
+BuildRequires:	pkgconfig(xkbcommon)
+BuildRequires:	scdoc
+BuildRequires:	pkgconfig(libinput)
+BuildRequires:	pkgconfig(libcap)
+BuildRequires:	pkgconfig(libevdev)
 BuildRequires:	pcre-devel
 BuildRequires:	pam-devel
 BuildRequires:	xsltproc
 BuildRequires:	docbook-dtds
+
+Recommends:	dri-drivers
+Recommends:	distro-release-theme
+Recommends:	Xwayland
 
 %description
 "SirCmpwn's Wayland window manager" is a work in progress
@@ -51,7 +55,7 @@ i3-compatible window manager for Wayland.
 %autosetup -p1
 
 %build
-export CFLAGS="%{optflags}"
+export CFLAGS="%{optflags} -O3"
 %meson
 %meson_build
 
@@ -59,6 +63,9 @@ export CFLAGS="%{optflags}"
 %meson_install
 # use kitty terminal
 sed -i 's!urxvt!kitty!g' %{buildroot}/etc/sway/config
+
+# set our background
+sed -i "s|^output \* bg .*|output * bg /usr/share/backgrounds/default.png fill|" %{buildroot}%{_sysconfdir}/sway/config
 
 %post
 %{_sbindir}/setcap cap_sys_ptrace=eip %{_bindir}/sway
