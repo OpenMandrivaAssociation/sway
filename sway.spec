@@ -47,7 +47,7 @@ Recommends:	sway-systemd
 Recommends:	dri-drivers
 Recommends:	qt5-qtwayland
 Recommends:	distro-release-theme
-Recommends:	Xwayland
+Recommends:	xwayland
 
 %description
 "SirCmpwn's Wayland window manager" is a work in progress
