@@ -43,6 +43,7 @@ BuildRequires:	pam-devel
 BuildRequires:	xsltproc
 BuildRequires:	docbook-dtds
 
+Recommends:	sway-systemd
 Recommends:	dri-drivers
 Recommends:	qt5-qtwayland
 Recommends:	distro-release-theme
