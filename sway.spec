@@ -44,6 +44,7 @@ BuildRequires:	xsltproc
 BuildRequires:	docbook-dtds
 
 Recommends:	dri-drivers
+Recommends:	qt5-qtwayland
 Recommends:	distro-release-theme
 Recommends:	Xwayland
 
