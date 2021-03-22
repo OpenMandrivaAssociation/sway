@@ -1,7 +1,7 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:		sway
 Version:	1.5.1
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		Graphical desktop/Other
 Url:		https://swaywm.org/
@@ -22,6 +22,7 @@ Requires:	kitty
 Requires:	mako
 Requires:	wl-clipboard
 Requires:	pavucontrol-qt
+Requires:	fonts-ttf-liberation
 
 BuildRequires:	meson
 BuildRequires:	egl-devel
