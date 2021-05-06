@@ -79,6 +79,7 @@ install -d -m755 -pv %{buildroot}%{_sysconfdir}/sway/config.d
 
 %files
 %config(noreplace)%{_sysconfdir}/%{name}/config
+%dir %{_sysconfdir}/sway/config.d
 %{_bindir}/sway*
 %{_mandir}/man5/%{name}*.*
 %{_mandir}/man7/sway*.7.*
