@@ -69,9 +69,10 @@ export CFLAGS="%{optflags} -O3"
 %meson_install
 # use kitty terminal
 sed -i 's!urxvt!kitty!g' %{buildroot}/etc/sway/config
-
 # set our background
 sed -i "s|^output \* bg .*|output * bg /usr/share/mdk/backgrounds/default.png fill|" %{buildroot}%{_sysconfdir}/sway/config
+# Create directory for extra config snippets
+install -d -m755 -pv %{buildroot}%{_sysconfdir}/sway/config.d
 
 %post
 %{_sbindir}/setcap cap_sys_ptrace=eip %{_bindir}/sway
