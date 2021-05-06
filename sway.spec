@@ -62,7 +62,7 @@ i3-compatible window manager for Wayland.
 
 %build
 export CFLAGS="%{optflags} -O3"
-%meson
+%meson -Dsd-bus-provider=libsystemd
 %meson_build
 
 %install
