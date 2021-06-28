@@ -14,6 +14,7 @@ BuildRequires:	meson
 BuildRequires:	egl-devel
 BuildRequires:	pkgconfig(wayland-server)
 BuildRequires:	pkgconfig(json-c)
+BuildRequires:	pkgconfig(libsystemd)
 BuildRequires:	pkgconfig(pango)
 BuildRequires:	pkgconfig(cairo)
 BuildRequires:	pkgconfig(pangocairo)
