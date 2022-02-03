@@ -1,6 +1,6 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:		sway
-Version:	1.6.1
+Version:	1.7
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Other
