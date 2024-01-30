@@ -1,7 +1,7 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:		sway
-Version:	1.8.1
-Release:	2
+Version:	1.9
+Release:	0.rc1
 License:	GPLv2+
 Group:		Graphical desktop/Other
 Url:		https://swaywm.org/
@@ -59,7 +59,7 @@ Recommends:	fontconfig
 i3-compatible window manager for Wayland.
 
 %prep
-%autosetup -p1
+%autosetup -n %{name}-%{version}-rc1 -p1
 
 %build
 export CFLAGS="%{optflags} -O3"
