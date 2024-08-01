@@ -20,7 +20,7 @@ BuildRequires:	pkgconfig(cairo)
 BuildRequires:	pkgconfig(pangocairo)
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
-BuildRequires:	pkgconfig(wlroots)
+BuildRequires:	pkgconfig(wlroots) >= 0.17.0
 BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:	scdoc
 BuildRequires:	pkgconfig(libinput)
