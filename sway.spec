@@ -1,14 +1,14 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:		sway
-Version:	1.9
-Release:	2
+Version:	1.10~rc1
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Other
 Url:		https://swaywm.org/
 # git clone https://github.com/SirCmpwn/sway.git
 # git archive --format=tar --prefix sway-0.5-$(date +%Y%m%d)/ HEAD | xz -vf > ../sway-0.5-$(date +%Y%m%d).tar.xz
 # Source0:	https://github.com/SirCmpwn/sway/archive/%{name}-%{version}-%{date}.tar.xz
-Source0:	https://github.com/swaywm/sway/archive/%{version}/%{name}-%{version}.tar.gz
+Source0:	https://github.com/swaywm/sway/archive/1.10-rc1/%{name}-1.10-rc1.tar.gz
 
 BuildRequires:	meson
 BuildRequires:	egl-devel
@@ -20,7 +20,7 @@ BuildRequires:	pkgconfig(cairo)
 BuildRequires:	pkgconfig(pangocairo)
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
-BuildRequires:	pkgconfig(wlroots) >= 0.17.0
+BuildRequires:	pkgconfig(wlroots-0.18) >= 0.18.1
 BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:	scdoc
 BuildRequires:	pkgconfig(libinput)
@@ -59,7 +59,7 @@ Recommends:	fontconfig
 i3-compatible window manager for Wayland.
 
 %prep
-%autosetup -n %{name}-%{version} -p1
+%autosetup -n %{name}-1.10-rc1 -p1
 
 %build
 export CFLAGS="%{optflags} -O3"
