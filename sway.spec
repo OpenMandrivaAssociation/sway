@@ -1,6 +1,6 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:		sway
-Version:	1.10.1
+Version:	1.11~rc3
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Other
@@ -8,7 +8,7 @@ Url:		https://swaywm.org/
 # git clone https://github.com/SirCmpwn/sway.git
 # git archive --format=tar --prefix sway-0.5-$(date +%Y%m%d)/ HEAD | xz -vf > ../sway-0.5-$(date +%Y%m%d).tar.xz
 # Source0:	https://github.com/SirCmpwn/sway/archive/%{name}-%{version}-%{date}.tar.xz
-Source0:	https://github.com/swaywm/sway/archive/%{version}/%{name}-%{version}.tar.gz
+Source0:	https://github.com/swaywm/sway/archive/1.11-rc3/%{name}-1.11-rc3.tar.gz
 
 BuildRequires:	meson
 BuildRequires:	egl-devel
@@ -43,12 +43,11 @@ Requires:	swaybg
 Requires:	kitty
 Requires:	mako
 Requires:	wl-clipboard
-Requires:	pavucontrol-qt
+Requires:	pavucontrol
 Requires:	fonts-ttf-liberation
 
 Recommends:	sway-systemd
 Recommends:	dri-drivers
-Recommends:	qt5-qtwayland
 Recommends:	distro-release-theme
 Recommends:	xwayland
 Recommends:	kitty
@@ -59,7 +58,7 @@ Recommends:	fontconfig
 i3-compatible window manager for Wayland.
 
 %prep
-%autosetup -n %{name}-%{version} -p1
+%autosetup -n %{name}-1.11-rc3 -p1
 
 %build
 export CFLAGS="%{optflags} -O3"
