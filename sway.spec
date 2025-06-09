@@ -1,6 +1,6 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:		sway
-Version:	1.11~rc3
+Version:	1.11
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Other
@@ -8,7 +8,7 @@ Url:		https://swaywm.org/
 # git clone https://github.com/SirCmpwn/sway.git
 # git archive --format=tar --prefix sway-0.5-$(date +%Y%m%d)/ HEAD | xz -vf > ../sway-0.5-$(date +%Y%m%d).tar.xz
 # Source0:	https://github.com/SirCmpwn/sway/archive/%{name}-%{version}-%{date}.tar.xz
-Source0:	https://github.com/swaywm/sway/archive/1.11-rc3/%{name}-1.11-rc3.tar.gz
+Source0:	https://github.com/swaywm/sway/archive/%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:	meson
 BuildRequires:	egl-devel
@@ -58,7 +58,7 @@ Recommends:	fontconfig
 i3-compatible window manager for Wayland.
 
 %prep
-%autosetup -n %{name}-1.11-rc3 -p1
+%autosetup -n %{name}-%{version} -p1
 
 %build
 export CFLAGS="%{optflags} -O3"
