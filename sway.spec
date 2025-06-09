@@ -1,6 +1,6 @@
 Summary:	SirCmpwn's Wayland window manager
 Name:		sway
-Version:	1.10.1
+Version:	1.11
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Other
@@ -20,7 +20,7 @@ BuildRequires:	pkgconfig(cairo)
 BuildRequires:	pkgconfig(pangocairo)
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
-BuildRequires:	pkgconfig(wlroots-0.18) >= 0.18.1
+BuildRequires:	pkgconfig(wlroots-0.19)
 BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:	scdoc
 BuildRequires:	pkgconfig(libinput)
@@ -43,12 +43,11 @@ Requires:	swaybg
 Requires:	kitty
 Requires:	mako
 Requires:	wl-clipboard
-Requires:	pavucontrol-qt
+Requires:	pavucontrol
 Requires:	fonts-ttf-liberation
 
 Recommends:	sway-systemd
 Recommends:	dri-drivers
-Recommends:	qt5-qtwayland
 Recommends:	distro-release-theme
 Recommends:	xwayland
 Recommends:	kitty
