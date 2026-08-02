@@ -1,3 +1,6 @@
+# workaround for clang 23
+%global optflags %{optflags} -Wno-error=unused-but-set-global
+
 Summary:	SirCmpwn's Wayland window manager
 Name:		sway
 Version:	1.12
